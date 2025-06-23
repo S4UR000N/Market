@@ -1,0 +1,22 @@
+meta {
+  name: Token
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8080/realms/market/protocol/openid-connect/token?grant_type=password&client_id=market-hub-client&username={{API.Market.Hub.username}}&password={{API.Market.Hub.password}}
+  body: none
+  auth: bearer
+}
+
+params:query {
+  grant_type: password
+  client_id: market-hub-client
+  username: {{API.Market.Hub.username}}
+  password: {{API.Market.Hub.password}}
+}
+
+headers {
+  content-type: application/x-www-form-urlencoded
+}
