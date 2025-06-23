@@ -7,4 +7,9 @@
     <!-- Folder where production build objects will be placed -->
     <BuildOutputFolder>$(MSBuildProjectDirectory)\dist\UI.Market.Web\browser\</BuildOutputFolder>
   </PropertyGroup>
+
+  <Target Name="LogProjectDirectory" BeforeTargets="Build">
+    <Message Text="MSBuildProjectDirectory: $(MSBuildProjectDirectory)" Importance="high" />
+    <Message Text="BuildOutputFolder: $(BuildOutputFolder)" Importance="high" />
+  </Target>
 </Project>
