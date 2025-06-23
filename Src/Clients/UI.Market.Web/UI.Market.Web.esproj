@@ -7,7 +7,16 @@
     <!-- Folder where production build objects will be placed -->
     <BuildOutputFolder>$(MSBuildProjectDirectory)\dist\UI.Market.Web\browser\</BuildOutputFolder>
   </PropertyGroup>
-
+  <ItemGroup>
+    <Folder Include="src\app\layouts\" />
+    <Folder Include="src\app\modules\common\models\entities\" />
+    <Folder Include="src\app\modules\common\models\enums\" />
+    <Folder Include="src\app\modules\common\models\interfaces\" />
+    <Folder Include="src\app\modules\common\models\valueobjects\" />
+    <Folder Include="src\app\modules\common\stores\" />
+    <Folder Include="src\app\modules\common\services\" />
+    <Folder Include="src\app\pages\" />
+  </ItemGroup>
   <Target Name="LogProjectDirectory" BeforeTargets="Build">
     <Message Text="MSBuildProjectDirectory: $(MSBuildProjectDirectory)" Importance="high" />
     <Message Text="BuildOutputFolder: $(BuildOutputFolder)" Importance="high" />

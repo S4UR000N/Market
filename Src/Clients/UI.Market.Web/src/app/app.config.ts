@@ -2,9 +2,9 @@ import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { providePrimeNG } from 'primeng/config';
-import Aura from '@primeng/themes/aura';
 
 import { routes } from './app.routes';
+import { AuraSky } from './themes/aura.sky';
 
 export const appConfig: ApplicationConfig =
 {
@@ -15,11 +15,11 @@ export const appConfig: ApplicationConfig =
         provideAnimationsAsync(),
         providePrimeNG({
             theme: {
-                preset: Aura,
+                preset: AuraSky,
                 options: {
-                    prefix: 'Prime',
-                    darkModeSelector: 'system',
-                }
+                    darkModeSelector: false || 'none'
+                },
+
             },
             ripple: true
         })
