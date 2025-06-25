@@ -7,9 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Keycloak.AuthServices.Authentication" Version="2.6.1" />
-    <PackageReference Include="Keycloak.AuthServices.Common" Version="2.6.1" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <ProjectReference Include="..\..\..\Common\Application\Common.Application.csproj" />
+    <ProjectReference Include="..\..\..\Common\Identity\Common.Identity.csproj" />
   </ItemGroup>
 
 </Project>
